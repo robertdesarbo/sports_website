@@ -9,15 +9,15 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
         <!-- App favicon -->
-        <link rel="shortcut icon" href="assets/images/favicon.ico">
+        <link rel="shortcut icon" href="{{ asset('/assets/images/favicon.ico') }}">
 
         <!-- App css -->
-        <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet">
-        <link href="{{ asset('assets/css/icons.css') }}" rel="stylesheet">
-        <link href="{{ asset('assets/css/metismenu.min.css') }}" rel="stylesheet">
-        <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
+        <link href="{{ asset('/assets/css/bootstrap.min.css') }}" rel="stylesheet">
+        <link href="{{ asset('/assets/css/icons.css') }}" rel="stylesheet">
+        <link href="{{ asset('/assets/css/metismenu.min.css') }}" rel="stylesheet">
+        <link href="{{ asset('/assets/css/style.css') }}" rel="stylesheet">
 
-        <script src="{{ asset('assets/js/modernizr.min.js') }}" defer></script>
+        <script src="{{ asset('/assets/js/modernizr.min.js') }}" defer></script>
 
     </head>
 
@@ -44,6 +44,7 @@
               <!-- Start content -->
               <div class="content">
                   <div class="container-fluid" style="margin-top: -22px;">
+                      @include( 'layouts.breadcrumb' )
                       @yield('content')
                   </div>
               </div> <!-- content -->
@@ -65,24 +66,24 @@
 
 
         <!-- jQuery  -->
-        <script src="{{ asset('assets/js/jquery.min.js') }}" defer></script>
-        <script src="{{ asset('assets/js/popper.min.js') }}" defer></script>
-        <script src="{{ asset('assets/js/bootstrap.min.js') }}" defer></script>
-        <script src="{{ asset('assets/js/metisMenu.min.js') }}" defer></script>
-        <script src="{{ asset('assets/js/waves.js') }}" defer></script>
-        <script src="{{ asset('assets/js/jquery.slimscroll.js') }}" defer></script>
-        <script src="{{ asset('plugins/waypoints/lib/jquery.waypoints.min.js') }}" defer></script>
-        <script src="{{ asset('plugins/counterup/jquery.counterup.min.js') }}" defer></script>
+        <script src="{{ asset('/assets/js/jquery.min.js') }}" defer></script>
+        <script src="{{ asset('/assets/js/popper.min.js') }}" defer></script>
+        <script src="{{ asset('/assets/js/bootstrap.min.js') }}" defer></script>
+        <script src="{{ asset('/assets/js/metisMenu.min.js') }}" defer></script>
+        <script src="{{ asset('/assets/js/waves.js') }}" defer></script>
+        <script src="{{ asset('/assets/js/jquery.slimscroll.js') }}" defer></script>
+        <script src="{{ asset('/plugins/waypoints/lib/jquery.waypoints.min.js') }}" defer></script>
+        <script src="{{ asset('/plugins/counterup/jquery.counterup.min.js') }}" defer></script>
 
         <!-- Chart JS -->
-        <script src="{{ asset('plugins/chart.js/chart.bundle.js') }}" defer></script>
+        <script src="{{ asset('/plugins/chart.js/chart.bundle.js') }}" defer></script>
 
         <!-- init dashboard -->
-        <script src="{{ asset('assets/pages/jquery.dashboard.init.js') }}" defer></script>
+        <script src="{{ asset('/assets/pages/jquery.dashboard.init.js') }}" defer></script>
 
         <!-- App js -->
-        <script src="{{ asset('assets/js/jquery.core.js') }}" defer></script>
-        <script src="{{ asset('assets/js/jquery.app.js') }}" defer></script>
+        <script src="{{ asset('/assets/js/jquery.core.js') }}" defer></script>
+        <script src="{{ asset('/assets/js/jquery.app.js') }}" defer></script>
 
     </body>
 </html>

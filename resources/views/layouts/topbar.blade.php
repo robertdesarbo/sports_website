@@ -5,10 +5,10 @@
     <div class="topbar-left">
         <a href="index.html" class="logo">
             <span>
-                <img src="assets/images/logo.png" alt="" height="16">
+                <img src="{{ asset('/assets/images/logo.png') }}" alt="" height="16">
             </span>
             <i>
-                <img src="assets/images/logo_sm.png" alt="" height="28">
+                <img src="{{ asset('/assets/images/logo_sm.png') }}" alt="" height="28">
             </i>
         </a>
     </div>
@@ -92,35 +92,35 @@
                     <div class="slimscroll" style="max-height: 190px;">
                         <!-- item-->
                         <a href="javascript:void(0);" class="dropdown-item notify-item">
-                            <div class="notify-icon"><img src="assets/images/users/avatar-2.jpg" class="img-fluid rounded-circle" alt="" /> </div>
+                            <div class="notify-icon"><img src="{{ asset('assets/images/users/avatar-2.jpg' ) }}" class="img-fluid rounded-circle" alt="" /> </div>
                             <p class="notify-details">Cristina Pride</p>
                             <p class="text-muted font-13 mb-0 user-msg">Hi, How are you? What about our next meeting</p>
                         </a>
 
                         <!-- item-->
                         <a href="javascript:void(0);" class="dropdown-item notify-item">
-                            <div class="notify-icon"><img src="assets/images/users/avatar-3.jpg" class="img-fluid rounded-circle" alt="" /> </div>
+                            <div class="notify-icon"><img src="{{ asset('assets/images/users/avatar-3.jpg' ) }}" class="img-fluid rounded-circle" alt="" /> </div>
                             <p class="notify-details">Sam Garret</p>
                             <p class="text-muted font-13 mb-0 user-msg">Yeah everything is fine</p>
                         </a>
 
                         <!-- item-->
                         <a href="javascript:void(0);" class="dropdown-item notify-item">
-                            <div class="notify-icon"><img src="assets/images/users/avatar-4.jpg" class="img-fluid rounded-circle" alt="" /> </div>
+                            <div class="notify-icon"><img src="{{ asset('assets/images/users/avatar-4.jpg' ) }}" class="img-fluid rounded-circle" alt="" /> </div>
                             <p class="notify-details">Karen Robinson</p>
                             <p class="text-muted font-13 mb-0 user-msg">Wow that's great</p>
                         </a>
 
                         <!-- item-->
                         <a href="javascript:void(0);" class="dropdown-item notify-item">
-                            <div class="notify-icon"><img src="assets/images/users/avatar-5.jpg" class="img-fluid rounded-circle" alt="" /> </div>
+                            <div class="notify-icon"><img src="{{ asset('assets/images/users/avatar-5.jpg' ) }}" class="img-fluid rounded-circle" alt="" /> </div>
                             <p class="notify-details">Sherry Marshall</p>
                             <p class="text-muted font-13 mb-0 user-msg">Hi, How are you? What about our next meeting</p>
                         </a>
 
                         <!-- item-->
                         <a href="javascript:void(0);" class="dropdown-item notify-item">
-                            <div class="notify-icon"><img src="assets/images/users/avatar-6.jpg" class="img-fluid rounded-circle" alt="" /> </div>
+                            <div class="notify-icon"><img src="{{ asset('assets/images/users/avatar-6.jpg' ) }}" class="img-fluid rounded-circle" alt="" /> </div>
                             <p class="notify-details">Shawn Millard</p>
                             <p class="text-muted font-13 mb-0 user-msg">Yeah everything is fine</p>
                         </a>
@@ -137,7 +137,7 @@
             <li class="dropdown notification-list">
                 <a class="nav-link dropdown-toggle waves-effect waves-light nav-user" data-toggle="dropdown" href="#" role="button"
                    aria-haspopup="false" aria-expanded="false">
-                    <img src="assets/images/users/avatar-1.jpg" alt="user" class="rounded-circle"> <span class="ml-1">{{ Auth::user( )->name}} <i class="mdi mdi-chevron-down"></i> </span>
+                    <span class="ml-1">{{ Auth::user( )->name}} <i class="mdi mdi-chevron-down"></i> </span>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
 
