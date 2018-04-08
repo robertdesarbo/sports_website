@@ -18,35 +18,35 @@
                                 <div class="form-group row">
                                     <label class="col-2 col-form-label">Name</label>
                                     <div class="col-10">
-                                        <input type="text" class="form-control" placeholder="organizations full name">
+                                        <input name="name" type="text" class="form-control" placeholder="organizations full name">
                                     </div>
                                 </div>
 
                                 <div class="form-group row">
                                     <label class="col-2 col-form-label">Address</label>
                                     <div class="col-10">
-                                        <input type="text" class="form-control" placeholder="">
+                                        <input name="address" type="text" class="form-control" placeholder="">
                                     </div>
                                 </div>
 
                                 <div class="form-group row">
                                     <label class="col-2 col-form-label">City</label>
                                     <div class="col-10">
-                                        <input type="text" class="form-control" placeholder="">
+                                        <input name="city" type="text" class="form-control" placeholder="">
                                     </div>
                                 </div>
 
                                 <div class="form-group row">
                                     <label class="col-2 col-form-label">State</label>
                                     <div class="col-10">
-                                        <input type="text" class="form-control" placeholder="">
+                                        <input name="state" type="text" class="form-control" placeholder="">
                                     </div>
                                 </div>
 
                                 <div class="form-group row">
                                     <label class="col-2 col-form-label">Zip</label>
                                     <div class="col-10">
-                                        <input type="text" class="form-control" placeholder="">
+                                        <input name="zip" type="text" class="form-control" placeholder="">
                                     </div>
                                 </div>
 
