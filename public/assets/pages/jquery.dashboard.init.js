@@ -113,43 +113,6 @@
 
             this.respChart($("#transactions-chart"),'Line',lineChart, lineOpts);
 
-            //barchart
-            var barChart = {
-                labels: ["January", "February", "March", "April", "May", "June", "July"],
-                datasets: [
-                    {
-                        label: "Sales Analytics",
-                        backgroundColor: "#3ec396",
-                        borderColor: "#3ec396",
-                        borderWidth: 1,
-                        hoverBackgroundColor: "#3ec396",
-                        hoverBorderColor: "#3ec396",
-                        data: [65, 59, 80, 81, 56, 89, 40,20]
-                    }
-                ]
-            };
-            var barOpts = {
-                scales: {
-                    yAxes: [{
-                        gridLines: {
-                            color: "rgba(255,255,255,0.05)",
-                            fontColor: '#fff'
-                        },
-                        ticks: {
-                            max: 100,
-                            min: 20,
-                            stepSize: 20
-                        }
-                    }],
-                    xAxes: [{
-                        gridLines: {
-                            color: "rgba(0,0,0,0.1)"
-                        }
-                    }]
-                }
-            };
-
-            this.respChart($("#sales-history"),'Bar',barChart, barOpts);
         },
         $.ChartJs = new ChartJs, $.ChartJs.Constructor = ChartJs
 
@@ -160,5 +123,3 @@
         "use strict";
         $.ChartJs.init()
     }(window.jQuery);
-
-

@@ -11,32 +11,24 @@
                 <table class="table">
                     <thead>
                         <th>Name</th>
-                        <th>Address</th>
-                        <th>City</th>
-                        <th>State</th>
-                        <th>Zip</th>
+                        <th>League</th>
+                        <th>Division</th>
                         <th>Status</th>
                     </thead>
                     <tbody>
-                        @foreach( $organizations as $organization )
+                        @foreach( $teams as $team )
                             <tr>
                                 <td>
-                                    {{ $organization->organization_name }}
+                                    {{ $team->team_name }}
                                 </td>
                                 <td>
-                                    {{ $organization->address }}
+                                    {{ $team->division->league->league_name }}
                                 </td>
                                 <td>
-                                    {{ $organization->city }}
+                                    {{ $team->division->division_name }}
                                 </td>
                                 <td>
-                                    {{ $organization->state }}
-                                </td>
-                                <td>
-                                    {{ $organization->zip }}
-                                </td>
-                                <td>
-                                    {{ $organization->status? "Active" : "Inactive" }}
+                                    {{ $team->status? "Active" : "Inactive" }}
                                 </td>
                             </tr>
                         @endforeach

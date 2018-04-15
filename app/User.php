@@ -26,4 +26,14 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function organization()
+    {
+        return $this->hasOne('App\OrganizationManagement', 'user_id', 'id' );
+    }
+
+    public function team()
+    {
+        return $this->belongsTo( 'App\TeamRoster', 'id', 'user_id' );
+    }
 }

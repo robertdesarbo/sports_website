@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Teams extends Migration
+class TeamsRoster extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,15 @@ class Teams extends Migration
      */
     public function up()
     {
-        Schema::create('teams', function (Blueprint $table) {
+        Schema::create('teams_roster', function (Blueprint $table) {
             $table->increments('id');
-            $table->unsignedInteger('division_id');
-            $table->string('team_name');
+            $table->unsignedInteger('team_id');
+            $table->unsignedInteger('user_id');
             $table->boolean('status');
             $table->timestamps();
 
-            $table->foreign('division_id')->references('id')->on('division')->onDelete('cascade');
+            $table->foreign('team_id')->references('id')->on('teams')->onDelete('cascade');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
 
@@ -31,6 +32,6 @@ class Teams extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('teams');
+        Schema::dropIfExists('teams_roster');
     }
 }

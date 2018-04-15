@@ -4,39 +4,31 @@
     <div class="row">
         <div class="col-xl-12">
             <div class="card-box">
-                <h4 class="header-title">Search an Organization</h4>
+                <h4 class="header-title">Search Divisions</h4>
 
                 @include( 'layouts.error_bag' )
 
                 <table class="table">
                     <thead>
                         <th>Name</th>
-                        <th>Address</th>
-                        <th>City</th>
-                        <th>State</th>
-                        <th>Zip</th>
+                        <th>Cost</th>
+                        <th>League</th>
                         <th>Status</th>
                     </thead>
                     <tbody>
-                        @foreach( $organizations as $organization )
+                        @foreach( $divisions as $division )
                             <tr>
                                 <td>
-                                    {{ $organization->organization_name }}
+                                    {{ $division->division_name }}
                                 </td>
                                 <td>
-                                    {{ $organization->address }}
+                                    {{ $division->division_cost }}
                                 </td>
                                 <td>
-                                    {{ $organization->city }}
+                                    {{ $division->league->league_name }}
                                 </td>
                                 <td>
-                                    {{ $organization->state }}
-                                </td>
-                                <td>
-                                    {{ $organization->zip }}
-                                </td>
-                                <td>
-                                    {{ $organization->status? "Active" : "Inactive" }}
+                                    {{ $division->status? "Active" : "Inactive" }}
                                 </td>
                             </tr>
                         @endforeach

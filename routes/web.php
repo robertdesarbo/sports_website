@@ -28,21 +28,28 @@ Route::put('/organizations', 'OrganizationController@update')->name('Organizatio
 Route::delete('/organizations', 'OrganizationController@destroy')->name('Organizations');
 
 Route::get('/leagues', 'LeagueController@index')->name('Leagues');
-Route::get('/leagues/create', 'LeagueController@index')->name('Leagues');
+Route::get('/leagues/create', 'LeagueController@create')->name('Leagues');
 Route::get('/leagues/{league}', 'LeagueController@create')->name('Leagues');
 Route::post('/leagues', 'LeagueController@store')->name('Leagues');
 Route::put('/leagues', 'LeagueController@update')->name('Leagues');
 Route::delete('/leagues', 'LeagueController@destroy')->name('Leagues');
 
+Route::get('/divisions', 'DivisionController@index')->name('Divisions');
+Route::get('/divisions/create', 'DivisionController@create')->name('Divisions');
+Route::get('/divisions/{league}', 'DivisionController@create')->name('Divisions');
+Route::post('/divisions', 'DivisionController@store')->name('Divisions');
+Route::put('/divisions', 'DivisionController@update')->name('Divisions');
+Route::delete('/divisions', 'DivisionController@destroy')->name('Divisions');
+
 Route::get('/teams', 'TeamController@index')->name('Teams');
-Route::get('/teams/create', 'TeamController@index')->name('Teams');
+Route::get('/teams/create', 'TeamController@create')->name('Teams');
 Route::get('/teams/{team}', 'TeamController@create')->name('Teams');
 Route::post('/teams', 'TeamController@store')->name('Teams');
 Route::put('/teams', 'TeamController@update')->name('Teams');
 Route::delete('/teams', 'TeamController@destroy')->name('Teams');
 
 Route::get('/players', 'PlayerController@index')->name('Players');
-Route::get('/players/create', 'PlayerController@index')->name('Players');
+Route::get('/players/create', 'PlayerController@create')->name('Players');
 Route::get('/players/{player}', 'PlayerController@create')->name('Players');
 Route::post('/players', 'PlayerController@store')->name('Players');
 Route::put('/players', 'PlayerController@update')->name('Players');
@@ -55,7 +62,7 @@ Route::get('/rosters/{user}', 'TeamController@create')->name('Rosters');
 Route::get('/games', 'GameController@index')->name('Games');
 
 Route::get('/fields', 'FieldController@index')->name('Fields');
-Route::get('/fields/create', 'FieldController@index')->name('Fields');
+Route::get('/fields/create', 'FieldController@create')->name('Fields');
 Route::get('/fields/{field}', 'FieldController@create')->name('Fields');
 Route::post('/fields', 'FieldController@store')->name('Fields');
 Route::put('/fields', 'FieldController@update')->name('Fields');

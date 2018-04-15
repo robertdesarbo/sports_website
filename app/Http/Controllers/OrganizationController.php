@@ -5,9 +5,12 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Organization;
+use App\OrganizationManagement;
 
+use Auth;
 use Redirect;
 use Config;
+
 class OrganizationController extends Controller
 {
     /**
@@ -50,6 +53,7 @@ class OrganizationController extends Controller
 
         $organization = new Organization( );
 
+        #Organaztion
         $organization->organization_name = $request->name;
         $organization->address           = $request->address;
         $organization->city              = $request->city;
@@ -57,6 +61,13 @@ class OrganizationController extends Controller
         $organization->zip               = $request->zip;
         $organization->status            = true;
         $organization->save( );
+
+        #TEMP -- Create a Organizational manager for testing
+        $organization_management                  = new OrganizationManagement( );
+        $organization_management->organization_id = $organization->id;
+        $organization_management->user_id         = Auth::user()->id;
+        $organization_management->status          = true;
+        $organization_management->save( );
 
         $request->session()->flash('status', $request->name.' was successfully created!');
         return Redirect::back();

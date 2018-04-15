@@ -30,10 +30,25 @@
                 </li>
 
                 <li>
+                    <a href="javascript: void(0);"><i class="dripicons-user-group"></i><span> Divisions </span> <span class="menu-arrow"></span></a>
+                    <ul class="nav-second-level" aria-expanded="false">
+                        <li><a href="{{ url( 'divisions/create' ) }}">Create</a></li>
+                        <li><a href="{{ url( 'divisions' ) }}">Search</a></li>
+                    </ul>
+                </li>
+
+                <li>
                     <a href="javascript: void(0);"><i class="dripicons-user-group"></i><span> Teams </span> <span class="menu-arrow"></span></a>
                     <ul class="nav-second-level" aria-expanded="false">
                         <li><a href="{{ url( 'teams/create' ) }}">Create</a></li>
                         <li><a href="{{ url( 'teams' ) }}">Search</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="javascript: void(0);"><i class="dripicons-user-group"></i><span> Players </span> <span class="menu-arrow"></span></a>
+                    <ul class="nav-second-level" aria-expanded="false">
+                        <li><a href="{{ url( 'players' ) }}">Search</a></li>
                     </ul>
                 </li>
 

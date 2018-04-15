@@ -83,16 +83,7 @@
         <script src="{{ asset('/assets/js/jquery.core.js') }}"></script>
         <script src="{{ asset('/assets/js/jquery.app.js') }}"></script>
 
-        <script>
-            $(function()
-            {
-                $( '.table' ).DataTable(
-                    {
-                        'lengthChange': false
-                    }
-                );
-            });
-        </script>
+        @yield('footer')
 
     </body>
 </html>
