@@ -16,6 +16,10 @@ class Organizations extends Migration
         Schema::create('organizations', function (Blueprint $table) {
             $table->increments('id');
             $table->string('organization_name');
+            $table->string('address');
+            $table->string('city');
+            $table->string('state');
+            $table->string('zip');
             $table->boolean('status');
             $table->timestamps();
         });

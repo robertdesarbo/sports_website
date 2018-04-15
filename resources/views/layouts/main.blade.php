@@ -17,7 +17,9 @@
         <link href="{{ asset('/assets/css/metismenu.min.css') }}" rel="stylesheet">
         <link href="{{ asset('/assets/css/style.css') }}" rel="stylesheet">
 
-        <script src="{{ asset('/assets/js/modernizr.min.js') }}" defer></script>
+        <link href="{{ asset('/plugins/datatables/dataTables.bootstrap4.min.css') }}" rel="stylesheet">
+
+        <script src="{{ asset('/assets/js/modernizr.min.js') }}"></script>
 
     </head>
 
@@ -64,26 +66,33 @@
         </div>
         <!-- END wrapper -->
 
-
         <!-- jQuery  -->
-        <script src="{{ asset('/assets/js/jquery.min.js') }}" defer></script>
-        <script src="{{ asset('/assets/js/popper.min.js') }}" defer></script>
-        <script src="{{ asset('/assets/js/bootstrap.min.js') }}" defer></script>
-        <script src="{{ asset('/assets/js/metisMenu.min.js') }}" defer></script>
-        <script src="{{ asset('/assets/js/waves.js') }}" defer></script>
-        <script src="{{ asset('/assets/js/jquery.slimscroll.js') }}" defer></script>
-        <script src="{{ asset('/plugins/waypoints/lib/jquery.waypoints.min.js') }}" defer></script>
-        <script src="{{ asset('/plugins/counterup/jquery.counterup.min.js') }}" defer></script>
+        <script src="{{ asset('/assets/js/jquery.min.js') }}"></script>
+        <script src="{{ asset('/assets/js/popper.min.js') }}"></script>
+        <script src="{{ asset('/assets/js/bootstrap.min.js') }}"></script>
+        <script src="{{ asset('/assets/js/metisMenu.min.js') }}"></script>
+        <script src="{{ asset('/assets/js/waves.js') }}"></script>
+        <script src="{{ asset('/assets/js/jquery.slimscroll.js') }}"></script>
+        <script src="{{ asset('/plugins/waypoints/lib/jquery.waypoints.min.js') }}"></script>
+        <script src="{{ asset('/plugins/counterup/jquery.counterup.min.js') }}"></script>
 
-        <!-- Chart JS -->
-        <script src="{{ asset('/plugins/chart.js/chart.bundle.js') }}" defer></script>
-
-        <!-- init dashboard -->
-        <script src="{{ asset('/assets/pages/jquery.dashboard.init.js') }}" defer></script>
+        <script src="{{ asset('/plugins/datatables/jquery.dataTables.min.js') }}"></script>
+        <script src="{{ asset('/plugins/datatables/dataTables.bootstrap4.min.js') }}"></script>
 
         <!-- App js -->
-        <script src="{{ asset('/assets/js/jquery.core.js') }}" defer></script>
-        <script src="{{ asset('/assets/js/jquery.app.js') }}" defer></script>
+        <script src="{{ asset('/assets/js/jquery.core.js') }}"></script>
+        <script src="{{ asset('/assets/js/jquery.app.js') }}"></script>
+
+        <script>
+            $(function()
+            {
+                $( '.table' ).DataTable(
+                    {
+                        'lengthChange': false
+                    }
+                );
+            });
+        </script>
 
     </body>
 </html>
